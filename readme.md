@@ -19,5 +19,5 @@
 <small>Global</small>
 <hr>
 <h6>Resultado dos testes</h6>
-<img src="result.jpeg>
+<img src="result.jpeg" alt="Resultado do Teste">
 
