@@ -12,10 +12,10 @@
 <pre>composer install</pre>
 
 <h5>Testar a Classe src/Prova com o namespace App</h5>
-<pre>vendor\bin\phpunit.bat</pre>
 <small>Windows</small>
-<pre>vendor\bin\phpunit</pre>
+<pre>vendor\bin\phpunit.bat</pre>
 <small>Global</small>
+<pre>vendor\bin\phpunit</pre>
 <hr>
 <h6>Resultado dos testes</h6>
 <img src="result.jpeg" alt="Resultado do Teste">
