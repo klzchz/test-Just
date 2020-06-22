@@ -8,7 +8,6 @@
     git clone https://github.com/klzchz/test-Just.git
 </pre>
 
-<hr>
 <h5>Instalar as dependências via composer</h5>
 <pre>composer install</pre>
 
