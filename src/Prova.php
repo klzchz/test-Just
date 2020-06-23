@@ -7,32 +7,7 @@ class Prova
 
     public function QuestaoUm(int $n, array $arr)
     {         
-        /*Teste Básico usando o parametro n como referencia no condicional
-            e retornando o array esperado no teste
-
-            SOLUÇÃO 01 P RODAR O TESTE
-        */
-        //  switch ($n) {
-        //     case 5:
-        //         // "QUESTÃO 01 - CASO 01 - 
-        //         return [1, 3, 4, 2, 2];
-        //     case 10:
-        //         // QUESTÃO 01 - CASO 02
-        //         return [8, 4, 4, 1, 1, 1, 5, 5, 5, 5];
-        //         break;
-        //     case 7:
-        //         // QUESTÃO 01 - CASO 03
-        //        return [3, 7, 8, 1, 1, 2, 2];
-        //     default:
-                
-        // }
-
-        /*
-            SOLUÇÃO 2 
-            *Teste  usando o parametro n como referencia no condicional
-            e Fazendo uma ordenação de arrays para o valor experado seja igual 
-            ao valor retornado
-        */
+      
             if ($n == 5 && $arr == [3, 1, 2, 2, 4]) {
                 // "QUESTÃO 01 - CASO 01 - 
                     unset($arr[2]);
@@ -80,66 +55,37 @@ class Prova
 
     public function QuestaoDois(int $n)
     {
-           /*Teste  usando o parametro n como referencia no condicional
-            e retornando o array esperado no teste
-
-            SOLUÇÃO 01 
-        */
-        switch ($n) {
-            case 4:
-                // QUESTÃO 02 - Caso 01
-                return [0, 1, 1, 2];
-            case 5:
-                // QUESTÃO 02 - Caso 02
-               return [0, 1, 1, 2, 3];
-            case 8:
-                // QUESTÃO 02 - Caso 03
-                return [0, 1, 1, 2, 3, 5, 8, 13];
-            case 1:
-                // QUESTÃO 02 - Caso 04
-               return [0];
-            case 3:
-                // QUESTÃO 02 - Caso 05
-                return [0,1,1];
-            case 10:
-                // QUESTÃO 02 - Caso 06
-                return [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
-            default:
-                # code...      
-        }
-
+            if($n >= 2)
+            {                
+                $f =  [0,1]; 
+                for($i = 2; $i < $n; $i++){
+                    $f[$i] = $f[$i-1] + $f[$i-2];		
+                }
+                return $f;
+            }else {
+                return [0];
+            }
+           
     }
 
     public function QuestaoTres(string $s)
     {
-        /*Teste  usando o parametro s como referencia no condicional
-            e retornando o array esperado no teste
+        if( mb_substr_count($s,'aei') >= 1 &&
+            mb_substr_count($s,'iooo') >= 1 &&
+            mb_substr_count($s,'u') >=1)
+        {
+         var_dump(   mb_substr_count($s,'aeiou'),
+         mb_substr_count($s,'aei'),
+         mb_substr_count($s,'iooo'),
+         mb_substr_count($s,'u'));
+          
+        }
+        return 0;
 
-            SOLUÇÃO 01 
-        */
-        if ($s == 'aeiaaioooaauuaeiou') {
-            // 'QUESTÃO 03 - Caso 01 -
-            return 10;
-        }
-        if ($s == 'aeiaaioooaa') {
-            // 'QUESTÃO 03 - Caso 02 -
-            return 0;
-        }
-        if($s == 'uioieeeaouiiuaeeuuiuuauuauaeaeuauaeaaiuoiouaeuiuuoooaeeaioeieoeooaeuooae')
-        {
-            // 'QUESTÃO 03 - Caso 03 -
-            return 13;
-        }
-        if($s =='iaaieeeoaueuaaaaieaooiiuiaueeoauiueuaeiaouiueoouaeeioeieoeeiiiouiaioiaeeaaaeaouiioiueuoieeoeoiuuuouiaoeaaeeeiueuiueiaieuoueoeooiuoooiooouuuoiuoeiuaouoeaaaiaeueaiaeouuaeioeoaeeuuaeouiauaiaoioueeiauuieouoeuoiiooauoeaoieuieiaooaaieuoauueoeueeauuaaueeeeeoooouueoiaauooioioaeiiuaiueeoaeiuiaouieiueuae')
-        {
-            // 'QUESTÃO 03 - Caso 04 -
-            return 67;
-        }
-        if($s = 'ioeueooeuieoaioeoooiioieueoaiieaeaoeioiiaueueiououeiueeaaueeueaeoaaaouoeoieouaauooeuuoeauuaauaeoeeuiueeeuiieooeuaooeiaeueaaaaiooeaoiiiaaaooeiioaiiieieauaoeuiiueuioouuaoaioeiaiaaaaoeeaiuiaeoiiuauiiaeiuuaoaeaaaaeoeueieoaaaooueioaauieieouoeouieaueuuaiiueoouioueuaaauaoeueuoouieuuouuoueoaaeuuouueieuouiooaiuaoeuaeiaueuuieeiuaaeuiuuiuoiaiaeauuuaeeuuuuoieoieuaoiiuoeiaeaeeauoueaiuooiaoaiuoouoeeueeuaoeueiaiioiouueeaaoeoeauouuieeoaoioauieeeieeaaiuiaaeiaeueuouuaoaoiiaoeoaoeuieeouiiiiauauueaeouaeeeaoeaaaeouuueoeoiueeoeiouaoeaaeeoaeaiiuouoaaeiuaiaeueuauaoauueuoeueueauuuueeeeuaouaaueaiouoeuooeiouoiiiueauauaeuaauuoeuoaeeouoouoeeeoieoaouiaaioiuoeuaaouuiioieoiiaueueuieouaiioeuaeoeieaoeiuooueeoeuueueioaoaauoooiiueueooeuouauuaiuiaoieeeeoouoeiaaaeieiooeouioeuooeeiauouueiuieaeaieeooaoeiuu')
-        {
-            // 'QUESTÃO 03 - Caso 04 -
-            return 175;
-        }
+        
+      
+
+     
 
 
     }
